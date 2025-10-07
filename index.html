@@ -1,32 +1,129 @@
 <!DOCTYPE html>
-<html lang="gl">
+<html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Raquel & Jorge</title>
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Invitación de Raquel e Jorge</title>
+
+<style>
+/* --- CSS embebido --- */
+
+/* Tipografía y fondo */
+body {
+  margin: 0;
+  font-family: 'Georgia', serif;
+  background: url('fondo.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #5a4634;
+  line-height: 1.6;
+}
+
+/* Contenedor principal */
+main {
+  max-width: 700px;
+  margin: 3rem auto;
+  padding: 2.5rem 2rem;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+/* Encabezados */
+h1 {
+  font-size: 3rem;
+  color: #000000;
+  margin-bottom: 0.2rem;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #FFBDCF;
+  margin-bottom: 1rem;
+}
+
+.intro {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+/* Formulario */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Inputs y botones */
+input, select, textarea, button {
+  padding: 0.85rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #FFBDCF;
+  border-radius: 12px;
+  font-family: inherit;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #b85c38;
+  box-shadow: 0 0 8px rgba(184, 92, 56, 0.3);
+  outline: none;
+}
+
+/* Botón */
+button {
+  background-color: #FFBDCF;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background-color: #7b5e43;
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 3rem;
+  font-style: italic;
+  color: #7b5e43;
+}
+</style>
 </head>
 <body>
-  <main>
-	
-    <section class="form-background">
-      <h2></h2>
-      <form action="https://formspree.io/f/tu-id-aqui" method="POST">
-        <input type="text" name="nome" placeholder="O teu nome" required />
-        <select name="asistencia" required>
-          <option value="">¿Asistirás?</option>
-          <option value="Si">Si</option>
-          <option value="Non">Non</option>
-        </select>
-        <input type="text" name="acompanante" placeholder="+1 (opcional)" />
-        <textarea name="comentarios" placeholder="Comentarios ou alerxias"></textarea>
-        <button type="submit">Enviar</button>
-      </form>
-    </section>
 
-    <footer>
-      <p>Moitas grazas por acompañarnos 💕</p>
-    </footer>
-  </main>
+<main>
+  <h1>💍 Raquel & Jorge 🐈‍⬛</h1>
+  <h2>Casamos!</h2>
+  <p class="intro">Encantaríanos contar coa túa preseenza neste día tan especial. Por favor, rechea os campos e envia a enquisa.</p>
+
+  <form action="https://formspree.io/f/xjkrykbg" method="POST">
+    <input type="text" name="name" placeholder="O teu nome" required>
+    <input type="email" name="_replyto" placeholder="O teu correo" required>
+    <select name="asistencia" required>
+      <option value="">Asistirás?</option>
+      <option value="sí">Si</option>
+      <option value="no">Non</option>
+    </select>
+    <textarea name="mensaje" rows="4" placeholder="Alerxias ou preferencias alimentarias."></textarea>
+    <button type="submit">Enviar</button>
+  </form>
+</main>
+
+<footer>
+  Grazas por acompañarnos neste día tan especial! ❤️
+</footer>
+
 </body>
 </html>
